@@ -17,6 +17,17 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             9: "NINE"
         };
 
+        if (this.pattern === 1) {
+            return integerString[this.leftOperand] + " " + this.getOperator() + " " + this.rightOperand;
+        }
+
+        if (this.pattern === 2) {
+            return  this.leftOperand + " " + this.getOperator() + " " + integerString[this.rightOperand];
+        }
+
+    }
+
+    this.getOperator = function () {
         var operator = {
             1: "+",
             2: "-",
@@ -24,13 +35,6 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             4: "/"
         };
 
-        if (this.pattern === 1) {
-            return integerString[this.leftOperand] + " " + operator[this.operator] + " " + this.rightOperand;
-        }
-
-        if (this.pattern === 2) {
-            return  this.leftOperand + " " + operator[this.operator] + " " + integerString[this.rightOperand];
-        }
-
-    }
+        return operator[this.operator];
+    };
 }
