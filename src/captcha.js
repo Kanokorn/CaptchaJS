@@ -13,23 +13,12 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
 
     this.pattern = pattern;
     this.leftOperand = leftOperand;
-    this.operator = operator;
+    this.operator = new Operator(operator);
     this.rightOperand = rightOperand;
 
     this.string = function() {
-        return  this.getLeftOperand() + " " + this.getOperator() + " " + this.getRightOperand();
+        return  this.getLeftOperand() + " " + this.operator + " " + this.getRightOperand();
     }
-
-    this.getOperator = function() {
-        var operator = {
-            1: "+",
-            2: "-",
-            3: "*",
-            4: "/"
-        };
-
-        return operator[this.operator];
-    };
 
     this.getLeftOperand = function() {
         if (this.pattern === 1) {
@@ -47,5 +36,21 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         }
 
         return integerString[this.rightOperand];
+    }
+}
+
+function Operator(operator) {
+    var operatorToStr = {
+        1: "+",
+        2: "-",
+        3: "*",
+        4: "/"
+    };
+
+    this.operator = operator;
+    this.toString = toString;
+
+    function toString() {
+        return operatorToStr[this.operator];
     }
 }
