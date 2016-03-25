@@ -18,11 +18,11 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         };
 
         if (this.pattern === 1) {
-            return this.getLeftOperand() + " " + this.getOperator() + " " + this.rightOperand;
+            return this.getLeftOperand() + " " + this.getOperator() + " " + this.getRightOperand();
         }
 
         if (this.pattern === 2) {
-            return  this.getLeftOperand() + " " + this.getOperator() + " " + integerString[this.rightOperand];
+            return  this.getLeftOperand() + " " + this.getOperator() + " " + this.getRightOperand();
         }
 
     }
@@ -58,4 +58,25 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
 
         return this.leftOperand;
     };
+
+    this.getRightOperand = function() {
+        var integerString = {
+            1: "ONE",
+            2: "TWO",
+            3: "THREE",
+            4: "FOUR",
+            5: "FIVE",
+            6: "SIX",
+            7: "SEVEN",
+            8: "EIGHT",
+            9: "NINE"
+        };
+        
+        if (this.pattern === 1) {
+            return this.rightOperand;
+            return;
+        }
+
+        return integerString[this.rightOperand];
+    }
 }
