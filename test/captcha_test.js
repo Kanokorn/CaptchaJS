@@ -45,4 +45,9 @@ describe("Captcha", function(){
             expect(captcha.string()).toEqual("NINE + 1");
         });
     });
+
+    it("First pattern and right operand is 2", function(){
+        var captcha = new Captcha(1,1,1,2);
+        expect(captcha.string()).toEqual("ONE + 2");
+    });
 });
