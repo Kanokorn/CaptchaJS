@@ -17,38 +17,6 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             9: "NINE"
         };
 
-        if (this.leftOperand === 2) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
-        if (this.leftOperand === 3) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
-        if (this.leftOperand === 4) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
-        if (this.leftOperand === 5) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
-        if (this.leftOperand === 6) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
-        if (this.leftOperand === 7) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
-        if (this.leftOperand === 8) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
-        if (this.leftOperand === 9) {
-            return integerString[this.leftOperand] + " + 1";
-        }
-
         return integerString[this.leftOperand] + " + 1";
     }
 }
