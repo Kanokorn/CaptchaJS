@@ -78,6 +78,11 @@ describe("Captcha", function(){
                 var captcha = new Captcha(2,1,1,1);
                 expect(captcha.string()).toEqual("1 + ONE");
             });
+
+            it("2 + ONE", function() {
+                var captcha = new Captcha(2,2,1,1);
+                expect(captcha.string()).toEqual("2 + ONE");
+            });
         });
     });
 });

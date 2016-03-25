@@ -29,7 +29,7 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         }
 
         if (this.pattern === 2) {
-            return "1 + ONE";
+            return  this.leftOperand + " + ONE";
         }
 
     }
