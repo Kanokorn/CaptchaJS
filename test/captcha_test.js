@@ -71,4 +71,13 @@ describe("Captcha", function(){
             expect(captcha.string()).toEqual("ONE / 1");
         });
     });
+
+    describe("Second pattern", function() {
+        describe("left operand should be number", function() {
+            it("1 + ONE", function() {
+                var captcha = new Captcha(2,1,1,1);
+                expect(captcha.string()).toEqual("1 + ONE");
+            });
+        });
+    });
 });

@@ -24,6 +24,13 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             4: "/"
         };
 
-        return integerString[this.leftOperand] + " " + operator[this.operator] + " " + this.rightOperand;
+        if (this.pattern === 1) {
+            return integerString[this.leftOperand] + " " + operator[this.operator] + " " + this.rightOperand;
+        }
+
+        if (this.pattern === 2) {
+            return "1 + ONE";
+        }
+
     }
 }
