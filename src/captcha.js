@@ -29,7 +29,7 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         }
 
         if (this.pattern === 2) {
-            return  this.leftOperand + " + " + integerString[this.rightOperand];
+            return  this.leftOperand + " " + operator[this.operator] + " " + integerString[this.rightOperand];
         }
 
     }

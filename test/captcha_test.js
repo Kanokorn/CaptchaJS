@@ -91,5 +91,12 @@ describe("Captcha", function(){
                 expect(captcha.string()).toEqual("1 + TWO");
             });
         });
+
+        describe("operator", function () {
+            it("1 - THREE", function() {
+                var captcha = new Captcha(2,1,2,3);
+                expect(captcha.string()).toEqual("1 - THREE");
+            });
+        });
     });
 });
