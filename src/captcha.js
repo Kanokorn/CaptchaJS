@@ -28,5 +28,9 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         if (this.operator === 3) {
             return integerString[this.leftOperand] + " * " + this.rightOperand;
         }
+
+        if (this.operator === 4) {
+            return integerString[this.leftOperand] + " / " + this.rightOperand;
+        }
     }
 }
