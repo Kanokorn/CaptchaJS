@@ -17,13 +17,7 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             9: "NINE"
         };
 
-        if (this.pattern === 1) {
-            return this.getLeftOperand() + " " + this.getOperator() + " " + this.getRightOperand();
-        }
-
-        if (this.pattern === 2) {
-            return  this.getLeftOperand() + " " + this.getOperator() + " " + this.getRightOperand();
-        }
+        return  this.getLeftOperand() + " " + this.getOperator() + " " + this.getRightOperand();
 
     }
 
@@ -71,7 +65,7 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             8: "EIGHT",
             9: "NINE"
         };
-        
+
         if (this.pattern === 1) {
             return this.rightOperand;
             return;
