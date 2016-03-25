@@ -17,6 +17,12 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             9: "NINE"
         };
 
-        return integerString[this.leftOperand] + " + " + this.rightOperand;
+        if (this.operator === 1) {
+            return integerString[this.leftOperand] + " + " + this.rightOperand;
+        }
+
+        if (this.operator === 2) {
+            return integerString[this.leftOperand] + " - " + this.rightOperand;
+        }
     }
 }

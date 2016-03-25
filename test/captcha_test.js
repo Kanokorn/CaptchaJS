@@ -54,4 +54,11 @@ describe("Captcha", function(){
             });
         });
     });
+
+    describe("Operator", function() {
+        it("minus", function() {
+            var captcha = new Captcha(1,1,2,1);
+            expect(captcha.string()).toEqual("ONE - 1");
+        });
+    });
 });
