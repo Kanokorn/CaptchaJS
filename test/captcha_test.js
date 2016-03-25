@@ -8,4 +8,9 @@ describe("Captcha", function(){
         var captcha = new Captcha(1,2,1,1);
         expect(captcha.string()).toEqual("TWO + 1");
     });
+
+    it("string should be THREE plus 1", function() {
+        var captcha = new Captcha(1,3,1,1);
+        expect(captcha.string()).toEqual("THREE + 1");
+    });
 });

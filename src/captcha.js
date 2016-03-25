@@ -8,7 +8,11 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         if (this.leftOperand === 2) {
             return "TWO + 1";
         }
-        
+
+        if (this.leftOperand === 3) {
+            return "THREE + 1";
+        }
+
         return "ONE + 1";
     }
 }
