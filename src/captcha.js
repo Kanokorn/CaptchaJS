@@ -17,20 +17,13 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
             9: "NINE"
         };
 
-        if (this.operator === 1) {
-            return integerString[this.leftOperand] + " + " + this.rightOperand;
-        }
+        var operator = {
+            1: "+",
+            2: "-",
+            3: "*",
+            4: "/"
+        };
 
-        if (this.operator === 2) {
-            return integerString[this.leftOperand] + " - " + this.rightOperand;
-        }
-
-        if (this.operator === 3) {
-            return integerString[this.leftOperand] + " * " + this.rightOperand;
-        }
-
-        if (this.operator === 4) {
-            return integerString[this.leftOperand] + " / " + this.rightOperand;
-        }
+        return integerString[this.leftOperand] + " " + operator[this.operator] + " " + this.rightOperand;
     }
 }
