@@ -84,5 +84,12 @@ describe("Captcha", function(){
                 expect(captcha.string()).toEqual("2 + ONE");
             });
         });
+
+        describe("right operand should be string", function() {
+            it("1 + TWO", function() {
+                var captcha = new Captcha(2,1,1,2);
+                expect(captcha.string()).toEqual("1 + TWO");
+            });
+        });
     });
 });
