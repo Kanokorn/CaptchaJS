@@ -18,16 +18,16 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         };
 
         if (this.pattern === 1) {
-            return integerString[this.leftOperand] + " " + this.getOperator() + " " + this.rightOperand;
+            return this.getLeftOperand() + " " + this.getOperator() + " " + this.rightOperand;
         }
 
         if (this.pattern === 2) {
-            return  this.leftOperand + " " + this.getOperator() + " " + integerString[this.rightOperand];
+            return  this.getLeftOperand() + " " + this.getOperator() + " " + integerString[this.rightOperand];
         }
 
     }
 
-    this.getOperator = function () {
+    this.getOperator = function() {
         var operator = {
             1: "+",
             2: "-",
@@ -36,5 +36,26 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
         };
 
         return operator[this.operator];
+    };
+
+    this.getLeftOperand = function() {
+        var integerString = {
+            1: "ONE",
+            2: "TWO",
+            3: "THREE",
+            4: "FOUR",
+            5: "FIVE",
+            6: "SIX",
+            7: "SEVEN",
+            8: "EIGHT",
+            9: "NINE"
+        };
+
+        if (this.pattern === 1) {
+            return integerString[this.leftOperand];
+            return;
+        }
+
+        return this.leftOperand;
     };
 }
