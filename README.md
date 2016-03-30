@@ -18,7 +18,7 @@ output:
 
 2.Clone this respository
 ```sh
-  $ git clone https://github.com/Kanokorn/FizzBuzzJS.git
+  $ git clone https://github.com/Kanokorn/CaptchaJS.git
   $ cd FizzBuzzJS
 ```
 
