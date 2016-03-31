@@ -5,7 +5,7 @@ function Captcha(pattern, leftOperand, operator, rightOperand) {
     this.rightOperand = rightOperand;
 
     this.string = function() {
-        return  this.getLeftOperand() + " " + this.operator + " " + this.getRightOperand();
+        return this.getLeftOperand() + " " + this.operator + " " + this.getRightOperand();
     }
 
     this.getLeftOperand = function() {
