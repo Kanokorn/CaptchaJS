@@ -1,13 +1,12 @@
-#FizzBuzz
-Fizz buzz is a group word game for children to teach them about division. 
-Players take turns to count incrementally, replacing any number divisible by three with the word "fizz", 
-and any number divisible by five with the word "buzz".
-[อ้างอิงและอ่านเพิ่มเติมได้จากที่นี่](https://en.wikipedia.org/wiki/Fizz_buzz)
+#Captcha
 
-output:
- >1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 
- >16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 
- >31, 32, Fizz, 34, Buzz, Fizz, ...
+Output มีอยู่ 2 pattern
+Pattern 1 : "ONE + 1"
+Pattern 2 : "1 + ONE"
+
+Left Operand : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 or ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE
+Right Operand : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 or ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE
+Operator: +, -, *, /
 
 
 ##Let's Code!
@@ -19,7 +18,7 @@ output:
 2.Clone this respository
 ```sh
   $ git clone https://github.com/Kanokorn/CaptchaJS.git
-  $ cd FizzBuzzJS
+  $ cd CaptchaJS
 ```
 
 3. Install
