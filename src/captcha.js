@@ -31,8 +31,7 @@ function Operator(operator) {
     var operatorToStr = {
         1: "+",
         2: "-",
-        3: "*",
-        4: "/"
+        3: "*"
     };
 
     this.operator = operator;
